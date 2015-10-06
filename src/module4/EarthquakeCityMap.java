@@ -80,7 +80,7 @@ public class EarthquakeCityMap extends PApplet {
 		//earthquakesURL = "test2.atom";
 		
 		// WHEN TAKING THIS QUIZ: Uncomment the next line
-		earthquakesURL = "quiz1.atom";
+		//earthquakesURL = "quiz1.atom";
 		
 		
 		// (2) Reading in earthquake data and geometric properties
@@ -196,7 +196,8 @@ public class EarthquakeCityMap extends PApplet {
 				
 			}
 			totalQuakes += countQuakes;
-			System.out.println("in " +  country.getProperty("name") +  " quake occured " + countQuakes + " times");
+			if(countQuakes != 0)
+				System.out.println("in " +  country.getProperty("name") +  " quake occured " + countQuakes + " times");
 		}
 		System.out.println("Total number of sea quakes is " + (quakeMarkers.size() - totalQuakes ));
 		
